@@ -116,7 +116,7 @@ def register_user(request):
             email = request.POST.get('email')
             password = request.POST.get('password')
             user = User.objects.create_user(email=email, username=email)
-            user.set_password(password=password)
+            user.set_password(password)
             user.save()
     return render(request, 'createuser.html')
 
